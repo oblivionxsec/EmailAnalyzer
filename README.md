@@ -402,3 +402,7 @@ This project delivers:
 ### ✔ Fully extensible rule engine
 
 ---
+
+# 13. 🌐 GitHub Pages Deployment
+
+The repository root contains `index.html`, which redirects GitHub Pages visitors to the static viewer at `viewer/index.html`. Configure GitHub Pages to deploy from the `main` branch and the repository root. The viewer starts empty and users upload their own `.eml` or `.json` reports.
