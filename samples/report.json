@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "report_id": "sample",
+    "generated_at": "",
+    "version": "1.0.0",
+    "analysis_mode": "offline",
+    "processing_time_ms": 0
+  },
+  "email": {},
+  "authentication": {},
+  "routing": {},
+  "content": {},
+  "attachments": [],
+  "threat_intel": {},
+  "phishing_analysis": {},
+  "scoring": {}
+}

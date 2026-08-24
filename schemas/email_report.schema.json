@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "email_report.schema.json",
+  "title": "EmailAnalyzer Report",
+  "type": "object",
+  "required": [
+    "meta",
+    "email",
+    "authentication",
+    "routing",
+    "content",
+    "attachments",
+    "threat_intel",
+    "phishing_analysis",
+    "scoring"
+  ],
+  "properties": {
+    "meta": { "type": "object" },
+    "email": { "type": "object" },
+    "authentication": { "type": "object" },
+    "routing": { "type": "object" },
+    "content": { "type": "object" },
+    "attachments": { "type": "array" },
+    "threat_intel": { "type": "object" },
+    "phishing_analysis": { "type": "object" },
+    "scoring": { "type": "object" }
+  },
+  "additionalProperties": false
+}
