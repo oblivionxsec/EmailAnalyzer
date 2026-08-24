@@ -1,0 +1,7 @@
+# Optional local-only analysis tools. Install only the adapters you need.
+yara-python
+pefile
+oletools
+pyclamd
+python-magic
+stix2

@@ -262,6 +262,11 @@ Each file contains:
 | Suspicious domain  | +25   |
 | Malicious file     | +40   |
 | Extension mismatch | +15   |
+| Display-name spoof | +20   |
+| Reply-To mismatch | +15   |
+| URL deception signal | +20   |
+| Urgency language | +10   |
+| Archive requires inspection | +15   |
 
 ---
 

@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "report_id": "f17bd959-8b11-4052-b885-369bed0b7116",
+    "generated_at": "2026-08-24T17:43:14.469301+00:00",
+    "version": "1.0.0",
+    "analysis_mode": "offline",
+    "processing_time_ms": 36,
+    "source_name": "sample.eml"
+  },
+  "email": {
+    "raw_size_bytes": 55662,
+    "raw_hash": {
+      "sha256": "59d12503dc1d1e689238837cb49316f65aa57119fed3d1b196776c81ef2901a3",
+      "md5": "f20ead619dd69c1e05e8a8e1421795c6"
+    },
+    "headers": {
+      "from": "Black Friday Shopping Voucher <admin367847@airmail.cc>",
+      "to": [
+        "darnell@castillomotorsports.com"
+      ],
+      "cc": [],
+      "subject": "Woosters Almost Sold Out! Black Friday Prices + Free Shipping For A Few More Hours!",
+      "date": "Thu, 14 Dec 2017 21:34:24 +0000",
+      "message_id": "<6ede6c9288b5a0446cd1fb69b5b1c097@airmail.cc>",
+      "reply_to": ""
+    }
+  },
+  "authentication": {
+    "spf": "absent",
+    "dkim": "absent",
+    "dmarc": "absent"
+  },
+  "routing": {
+    "hops": [
+      {
+        "hop": 1,
+        "value": "from cock.li ([185.100.85.212]) by smtp.castillomotorsports.com;\tThu, 14 Dec 2017 21:40:07 +0000"
+      }
+    ],
+    "hop_count": 1,
+    "origin_ip": "185.100.85.212"
+  },
+  "content": {
+    "plain_text": " Black Friday Sale. \r\n50% Discount on all shops! \r\n\r\nStarting now until Wednesday the 31th of Decembr we will be offering all\r\nusers a 45% on Discount any in online shop. \r\n\r\nThis means that if you haven't upgraded yet, here is your chance. USE\r\nTHE COUPON FOR ANY PURCHASES IN ONLINE SHOP(AMAZON AND OTHER ONLINE\r\nSHOPS) \r\n\r\nCoupon: ATTACHED DARNELL@CASTILLOMOTORSPORTS.COM",
+    "html": "<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" /></head><body style='font-size: 10pt; font-family: Verdana,Geneva,sans-serif'>\r\n<table style=\"color: white; margin-left: auto; margin-right: auto;\" border=\"0\" width=\"700\" cellspacing=\"0\" cellpadding=\"0\" bgcolor=\"#000000\">\r\n<tbody>\r\n<tr>\r\n<td style=\"vertical-align: top;\" valign=\"top\">\r\n<table style=\"height: 794px;\" border=\"0\" width=\"683\" cellspacing=\"0\" cellpadding=\"0\">\r\n<tbody>\r\n<tr style=\"height: 15px;\">\r\n<td style=\"vertical-align: top; width: 708px; height: 15px;\" valign=\"top\">&nbsp;</td>\r\n</tr>\r\n<tr style=\"height: 14px;\">\r\n<td style=\"vertical-align: top; width: 708px; height: 14px;\" valign=\"top\">&nbsp;</td>\r\n</tr>\r\n<tr style=\"height: 794px;\">\r\n<td style=\"vertical-align: top; padding-top: 0px; padding-bottom: 0px; background-color: #231f1f; width: 708px; height: 794px;\" valign=\"top\" bgcolor=\"#231f1f\">\r\n<table border=\"0\" width=\"700\" cellspacing=\"0\" cellpadding=\"0\">\r\n<tbody>\r\n<tr>\r\n<td style=\"vertical-align: top;\" valign=\"top\">\r\n<table border=\"0\" width=\"700\" cellspacing=\"0\" cellpadding=\"0\">\r\n<tbody>\r\n<tr>\r\n<td style=\"vertical-align: top; background: #7e3f98; text-align: center; padding-top: 50px; color: #fff; font-size: 18px;\" valign=\"top\">Black Friday Sale. <br /> 50% Discount on all shops!</td>\r\n</tr>\r\n<tr>\r\n<td style=\"vertical-align: top; background: transparent;\" valign=\"top\"><img class=\"SDjio2tf\" style=\"vertical-align: middle; border: none;\" tabindex=\"0\" src=\"https://s3-us-west-2.amazonaws.com/capublic/newsletter/050/1.png\" width=\"700\" height=\"405\" />\r\n<div class=\"a6S\" dir=\"ltr\" style=\"opacity: 0.01; left: 652px; top: 533px;\">&nbsp;</div>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"color: #ffffff; font-family: Tahoma,'Trebuchet MS',Geneva,'Helvetica Neue',Helvetica,Arial,sans-serif; vertical-align: top; padding-left: 80px; padding-right: 80px; padding-bottom: 20px;\" valign=\"top\">\r\n<table>\r\n<tbody>\r\n<tr>\r\n<td style=\"color: #ffffff; font-family: Tahoma,'Trebuchet MS',Geneva,'Helvetica Neue',Helvetica,Arial,sans-serif; vertical-align: top; padding-left: 0px; padding-right: 0px; padding-bottom: 20px;\" valign=\"top\" width=\"100%\">\r\n<p style=\"color: #ffffff; font-family: Tahoma,'Trebuchet MS',Geneva,'Helvetica Neue',Helvetica,Arial,sans-serif; margin-top: 0; margin-bottom: 0px; font-weight: normal; font-size: 15px;\" align=\"justify\">Starting now until Wednesday the 31th of Decembr we will be offering all users a 45% on Discount any in online shop. <br /> <br /> This means that if you haven't upgraded yet, here is your chance. <strong>Use the coupon for any purchases in online shop(amazon and other online shops)</strong> </p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"color: #ffffff; font-family: Tahoma,'Trebuchet MS',Geneva,'Helvetica Neue',Helvetica,Arial,sans-serif; vertical-align: top; background-color: #3d3636; padding-top: 20px; padding-bottom: 20px;\" align=\"center\" valign=\"top\">\r\n<table>\r\n<tbody>\r\n<tr>\r\n<td style=\"color: #ffffff; font-family: Tahoma,'Trebuchet MS',Geneva,'Helvetica Neue',Helvetica,Arial,sans-serif; vertical-align: top; background-color: #3d3636; text-align: center; padding: 0 80px 0 80px;\" align=\"left\" valign=\"top\" width=\"100%\">\r\n<p style=\"color: #ffffff; font-family: Tahoma,'Trebuchet MS',Geneva,'Helvetica Neue',Helvetica,Arial,sans-serif; margin-top: 0; margin-bottom: 0px; font-weight: normal; font-size: 15px;\" align=\"justify\">Coupon: <strong>Attached darnell@castillomotorsports.com</strong></p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"color: #ffffff; font-family: Tahoma,'Trebuchet MS',Geneva,'Helvetica Neue',Helvetica,Arial,sans-serif; vertical-align: top; padding-left: 80px; padding-right: 80px; padding-bottom: 20px;\" valign=\"top\">&nbsp;</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</body></html>\r\n",
+    "urls": [
+      {
+        "url": "https://s3-us-west-2.amazonaws.com/capublic/newsletter/050/1.png",
+        "domain": "s3-us-west-2.amazonaws.com",
+        "risk_score": 0,
+        "flags": []
+      }
+    ]
+  },
+  "attachments": [
+    {
+      "filename": "Black Friday.zip",
+      "size_bytes": 36018,
+      "content_type": "application/zip",
+      "file_type": "application/x-zip-compressed",
+      "hash": {
+        "sha256": "5fd4b1ef7a3069c8ae76b83f220e0beff5b2b7f939357656f4b198ed02cd850c",
+        "md5": "f75dd471fc651508b5785569fb39e0cb"
+      },
+      "extension_mismatch": true,
+      "children": [
+        {
+          "filename": "Black Friday.docx",
+          "size_bytes": 40596,
+          "content_type": "",
+          "file_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "hash": {
+            "sha256": "a7447db99ba60c2f7bfd9e9bcfadfb05a4fc0ea214450b76ea85d386db1f727b",
+            "md5": "d2c54126b71a2439dfc384930580786c"
+          },
+          "extension_mismatch": false,
+          "children": [
+            {
+              "filename": "[Content_Types].xml",
+              "size_bytes": 1511,
+              "content_type": "",
+              "file_type": "text/xml",
+              "hash": {
+                "sha256": "b40f125e87e36dfa56e5b4f5ddb04d6a0ac558a7f5c8890727bde9f3fd2bd2bc",
+                "md5": "8be64d55ab32e0a356095c2af1d58da7"
+              },
+              "extension_mismatch": false,
+              "children": [],
+              "local_analysis": []
+            },
+            {
+              "filename": "_rels/.rels",
+              "size_bytes": 590,
+              "content_type": "",
+              "file_type": "application/octet-stream",
+              "hash": {
+                "sha256": "e19238d7a71fa7a2490776252686f70e2de6238c87cd509b5e3a3cc07c2ea4df",
+                "md5": "77bf61733a633ea617a4db76ef769a4d"
+              },
+              "extension_mismatch": false,
+              "children": [],
+              "local_analysis": []
+            },
+            {
+              "filename": "word/_rels/document.xml.rels",
+              "size_bytes": 1226,
+              "content_type": "",
+              "file_type": "application/octet-stream",
+              "hash": {
+                "sha256": "3897141bf56a1b7c8e0ce8dda3b44f15c17e73205a69c255462e22c688efc63f",
+                "md5": "7aecc5498246ec22c9d6b50209b83c42"
+              },
+              "extension_mismatch": false,
+              "children": [],
+              "local_analysis": []
+            },
+            {
+              "filename": "word/document.xml",
+              "size_bytes": 9190,
+              "content_type": "",
+              "file_type": "text/xml",
+              "hash": {
+                "sha256": "381f923d4254275686aa256b47e34cc0cbde46e67bfa201a53ee925b78910fa9",
+                "md5": "583f723f3357afc9e86ad441540a62c3"
+              },
+              "extension_mismatch": false,
+              "children": [],
+              "local_analysis": []
+            },
+            {
+              "filename": "word/media/image1.jpg",
+              "size_bytes": 23369,
+              "content_type": "",
+              "file_type": "image/jpeg",
+              "hash": {
+                "sha256": "0f46efb4273aa5de7925b55974d85797dbd979dbca548721cff11a3c37073eb3",
+                "md5": "fbe57c8df1a1cfdcd6a7dda5383ebb17"
+              },
+              "extension_mismatch": false,
+              "children": [],
+              "local_analysis": []
+            },
+            {
+              "filename": "word/embeddings/oleObject1.bin",
+              "size_bytes": 5120,
+              "content_type": "",
+              "file_type": "application/octet-stream",
+              "hash": {
+                "sha256": "5dcda88ea9544da5ecc2c39bf45fdecfa924ece8adefe6fedd00f504beb8155a",
+                "md5": "e23594c5429d3785fca435b6e2eb3ecc"
+              },
+              "extension_mismatch": false,
+              "children": [],
+              "local_analysis": []
+            },
+            {
+              "filename": "word/theme/theme1.xml",
+              "size_bytes": 6395,
+              "content_type": "",
+              "file_type": "text/xml",
+              "hash": {
+                "sha256": "c15794762565860ef5c04931ba0c0844948f07539b136a028b3539c262a7566d",
+                "md5": "8bc202018d32a1ada8868345db6e4125"
+              },
+              "extension_mismatch": false,
+              "children": [],
+              "local_analysis": []
+            },
+            {
+              "filename": "word/media/image2.emf",
+              "size_bytes": 5352,
+              "content_type": "",
+              "file_type": "image/x-emf",
+              "hash": {
+                "sha256": "a98e291138500445fc9829aa24ae87f1edf056947321f7023f7b67f924f049f4",
+                "md5": "fb813ed34231b6de535cb1d3222b5656"
+              },
+              "extension_mismatch": false,
+              "children": [],
+              "local_analysis": []
+            },
+            {
+              "filename": "word/settings.xml",
+              "size_bytes": 3004,
+              "content_type": "",
+              "file_type": "text/xml",
+              "hash": {
+                "sha256": "850558e255bf2fe379eeaba01860b2f4eec2388693ffda2b467ea1f46b983aca",
+                "md5": "1e6129879590c001330ab9f4f03a5ea8"
+              },
+              "extension_mismatch": false,
+              "children": [],
+              "local_analysis": []
+            },
+            {
+              "filename": "word/fontTable.xml",
+              "size_bytes": 1340,
+              "content_type": "",
+              "file_type": "text/xml",
+              "hash": {
+                "sha256": "4fb52e7bfab53444501897e9b340d4bf83b6ad7e37f544099ba40fd085aebf3b",
+                "md5": "566c8e56df920e5331d6758fb7a55dc0"
+              },
+              "extension_mismatch": false,
+              "children": [],
+              "local_analysis": []
+            },
+            {
+              "filename": "word/webSettings.xml",
+              "size_bytes": 576,
+              "content_type": "",
+              "file_type": "text/xml",
+              "hash": {
+                "sha256": "f096acb67339b77d0e2dd9afd8fc8f34e7b563101773f433d0ed540859d6cb13",
+                "md5": "261ba76e04bd8ddbd0f4e7a50d02f4c7"
+              },
+              "extension_mismatch": false,
+              "children": [],
+              "local_analysis": []
+            },
+            {
+              "filename": "docProps/app.xml",
+              "size_bytes": 994,
+              "content_type": "",
+              "file_type": "text/xml",
+              "hash": {
+                "sha256": "05ea6ced2079ed632b659914b0d939c6046997f1c4236ca70949c71bedcc4427",
+                "md5": "6a78bd0fb9501a672b2d7105ef59592f"
+              },
+              "extension_mismatch": false,
+              "children": [],
+              "local_analysis": []
+            },
+            {
+              "filename": "word/styles.xml",
+              "size_bytes": 30413,
+              "content_type": "",
+              "file_type": "text/xml",
+              "hash": {
+                "sha256": "222fc2b4dcea04cf85afe43739e6a6e27505b4012e81fc660c8f9fdbd156e3c6",
+                "md5": "2f2bb5b783d9c797608bb03551d36f41"
+              },
+              "extension_mismatch": false,
+              "children": [],
+              "local_analysis": []
+            },
+            {
+              "filename": "docProps/core.xml",
+              "size_bytes": 792,
+              "content_type": "",
+              "file_type": "text/xml",
+              "hash": {
+                "sha256": "daeab8694aa6b367bfcc5f88e6450399b1814aaaace61e43f578c4cbe450bb6a",
+                "md5": "75caf25245c882814b1b25897c2a2294"
+              },
+              "extension_mismatch": false,
+              "children": [],
+              "local_analysis": []
+            }
+          ],
+          "local_analysis": []
+        }
+      ],
+      "local_analysis": []
+    }
+  ],
+  "threat_intel": {
+    "mode": "offline",
+    "matches": []
+  },
+  "phishing_analysis": {
+    "indicators": [
+      {
+        "type": "extension_mismatch",
+        "reason": "Type mismatch: Black Friday.zip"
+      },
+      {
+        "type": "archive_attachment",
+        "reason": "Archive requires recursive content inspection: Black Friday.zip"
+      }
+    ]
+  },
+  "scoring": {
+    "score": 30,
+    "category": "Clean",
+    "findings": [
+      {
+        "id": "EXTENSION_MISMATCH",
+        "weight": 15,
+        "reason": "Type mismatch: Black Friday.zip"
+      },
+      {
+        "id": "ARCHIVE_ATTACHMENT",
+        "weight": 15,
+        "reason": "Archive requires recursive content inspection: Black Friday.zip"
+      }
+    ]
+  },
+  "local_tools": {
+    "scanned": 16,
+    "unavailable": [],
+    "mode": "local-only"
+  }
+}

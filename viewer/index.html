@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EmailAnalyzer | Forensic Report</title>
+  <link rel="stylesheet" href="src/styles.css?v=4">
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <div><p class="eyebrow">OFFLINE FORENSICS / REPORT VIEWER</p><h1>EmailAnalyzer</h1><p id="report-meta" class="muted">Loading report.json...</p></div>
+      <div class="stamp">STATIC<br>ANALYSIS</div>
+    </header>
+    <section id="status" class="notice" hidden></section>
+    <div class="workspace">
+    <aside class="file-panel" aria-label="Loaded reports">
+      <div class="file-panel-head"><p class="eyebrow">CASE FILES</p><h2>Reports</h2></div>
+      <label class="upload-button" for="file-input">+ Load .eml / .json</label>
+      <input id="file-input" type="file" accept=".eml,.json,application/json,message/rfc822" multiple>
+      <p class="file-hint">Files stay in this browser tab.</p>
+      <label class="key-label" for="vt-key">VirusTotal key</label>
+      <input id="vt-key" class="key-input" type="password" autocomplete="off" placeholder="Enter your VirusTotal API key">
+      <button id="vt-check" class="key-button" type="button">Check hashes</button>
+      <p class="file-hint">Memory-only. Sent directly to VirusTotal.</p>
+      <div id="file-list" class="file-list"></div>
+    </aside>
+    <div class="report-area">
+    <nav class="tabs" aria-label="Report sections">
+      <button class="tab active" data-view="overview">Overview</button>
+      <button class="tab" data-view="message">Message</button>
+      <button class="tab" data-view="artifacts">Artifacts</button>
+      <button class="tab" data-view="raw">Raw report</button>
+    </nav>
+    <section id="overview" class="view active">
+      <section class="score-panel" aria-labelledby="score-title">
+        <div><p class="eyebrow">RISK ASSESSMENT</p><h2 id="score-title">Deterministic verdict</h2><p class="muted">Rule-based result from the offline analyzer.</p></div>
+        <div class="score"><strong id="score-value">--</strong><span>/100</span></div><p id="score-category" class="category">--</p>
+      </section>
+      <section class="metric-row"><div><span>Raw size</span><strong id="raw-size">--</strong></div><div><span>Received hops</span><strong id="hop-count">--</strong></div><div><span>Attachments</span><strong id="attachment-count">--</strong></div><div><span>URLs found</span><strong id="url-count">--</strong></div></section>
+      <section class="grid"><article class="panel"><p class="eyebrow">FINDINGS</p><h2>Rule results</h2><ul id="findings" class="findings"></ul></article><article class="panel"><p class="eyebrow">AUTHENTICATION</p><h2>Mail checks</h2><dl id="authentication"></dl></article><article class="panel wide"><p class="eyebrow">INTEGRITY</p><h2>Raw message fingerprints</h2><dl id="hashes"></dl></article></section>
+    </section>
+    <section id="message" class="view"><section class="grid"><article class="panel"><p class="eyebrow">MESSAGE</p><h2>Headers</h2><dl id="headers"></dl></article><article class="panel"><p class="eyebrow">CONTENT</p><h2>Plain text</h2><pre id="plain-text" class="content"></pre></article><article class="panel wide"><p class="eyebrow">ROUTING</p><h2>Received timeline</h2><ol id="routing" class="timeline"></ol></article><article class="panel wide"><p class="eyebrow">LINKS</p><h2>URL risk table</h2><div id="urls" class="table-wrap"></div></article></section></section>
+    <section id="artifacts" class="view"><section class="grid"><article class="panel wide"><p class="eyebrow">ATTACHMENTS</p><h2>Recursive artifact tree</h2><div id="attachments" class="artifact-tree"></div></article><article class="panel wide"><p class="eyebrow">THREAT INTELLIGENCE</p><h2>Security vendor analysis</h2><div id="intel" class="intel-results"></div></article><article class="panel wide phishing-panel"><p class="eyebrow">PHISHING ANALYSIS</p><h2>Indicators</h2><ul id="indicators" class="findings"></ul></article></section></section>
+    <section id="raw" class="view"><article class="panel raw-panel"><p class="eyebrow">SOURCE DATA</p><h2>report.json</h2><pre id="raw-report" class="content"></pre></article></section>
+    </div></div>
+  </main>
+  <script src="src/main.js?v=11"></script>
+</body>
+</html>
