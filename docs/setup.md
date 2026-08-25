@@ -34,7 +34,7 @@ VirusTotal enrichment, if added later, must run in a private local process such 
 
 The viewer has no Node.js or server-side dependency. It starts empty and analyzes the current file selected with **Load .eml / .json**. It can load multiple local `.json` reports or `.eml` files; reports remain in the current browser tab and can be switched from the case-file list. There is no static sample report loaded at startup, so uploading a changed file analyzes its current bytes.
 
-The case-file panel accepts exported VirusTotal JSON for the person using the viewer. GitHub Pages never sends a key or calls the VirusTotal API. Run any authenticated lookup privately, then import the JSON result into the viewer.
+The case-file panel accepts each user's VirusTotal API key for direct hash checks. The key is password-masked, held only in page memory, never written to reports, and cleared on reload. GitHub Pages may block direct API requests because of CORS; for GitHub-hosted use, run the lookup privately and import the resulting report JSON instead.
 
 The Python CLI remains the full-fidelity analyzer. Browser `.eml` intake is a lightweight review mode for static hosting; use the CLI for recursive archive extraction, MD5 generation, and complete rule analysis, then export the result:
 
