@@ -19,10 +19,10 @@
       <label class="upload-button" for="file-input">+ Load .eml / .json</label>
       <input id="file-input" type="file" accept=".eml,.json,application/json,message/rfc822" multiple>
       <p class="file-hint">Files stay in this browser tab.</p>
-      <label class="key-label" for="vt-key">VirusTotal key</label>
-      <input id="vt-key" class="key-input" type="password" autocomplete="off" placeholder="Enter your VirusTotal API key">
-      <button id="vt-check" class="key-button" type="button">Check hashes</button>
-      <p class="file-hint">Memory-only. Sent directly to VirusTotal.</p>
+      <label class="key-label" for="vt-json">Security vendor JSON</label>
+      <label class="key-button" for="vt-json">Import VirusTotal JSON</label>
+      <input id="vt-json" type="file" accept=".json,application/json">
+      <p class="file-hint">Import results from a private lookup. No API key is used here.</p>
       <div id="file-list" class="file-list"></div>
     </aside>
     <div class="report-area">
@@ -45,6 +45,6 @@
     <section id="raw" class="view"><article class="panel raw-panel"><p class="eyebrow">SOURCE DATA</p><h2>report.json</h2><pre id="raw-report" class="content"></pre></article></section>
     </div></div>
   </main>
-  <script src="src/main.js?v=11"></script>
+  <script src="src/main.js?v=12"></script>
 </body>
 </html>
