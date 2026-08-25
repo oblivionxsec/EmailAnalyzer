@@ -189,6 +189,17 @@ function addReport(report, name) {
   render(report);
 }
 
+function applyVirusTotalScore(report, matches) {
+  const localFindings = (report.scoring?.findings || []).filter((finding) => !finding.id.startsWith("VIRUSTOTAL_"));
+  const vendorFindings = [];
+  const malicious = matches.reduce((total, match) => total + Number(match.malicious || 0), 0);
+  const suspicious = matches.reduce((total, match) => total + Number(match.suspicious || 0), 0);
+  if (malicious > 0) vendorFindings.push({ id: "VIRUSTOTAL_MALICIOUS", weight: 50, reason: `VirusTotal reports ${malicious} malicious vendor detection(s)` });
+  else if (suspicious > 0) vendorFindings.push({ id: "VIRUSTOTAL_SUSPICIOUS", weight: 20, reason: `VirusTotal reports ${suspicious} suspicious vendor detection(s)` });
+  const score = Math.min(100, localFindings.reduce((total, finding) => total + Number(finding.weight || 0), 0) + vendorFindings.reduce((total, finding) => total + finding.weight, 0));
+  report.scoring = { ...report.scoring, score, category: score <= 30 ? "Clean" : score <= 70 ? "Suspicious" : "Malicious", findings: [...localFindings, ...vendorFindings] };
+}
+
 async function checkVirusTotal() {
   const key = byId("vt-key").value.trim();
   const status = byId("status");
@@ -213,6 +224,8 @@ async function checkVirusTotal() {
     } catch (error) { status.hidden = false; status.textContent = `VirusTotal check failed: ${error.message}`; return; }
   }
   report.threat_intel = { mode: "virustotal-browser", matches, lookups: [...new Set(hashes)].length };
+  applyVirusTotalScore(report, matches);
+  renderFileList();
   render(report);
   status.hidden = false;
   status.textContent = matches.length ? `VirusTotal found ${matches.length} flagged hash(es).` : "VirusTotal found no flagged hashes.";

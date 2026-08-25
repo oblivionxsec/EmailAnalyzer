@@ -40,6 +40,7 @@ h2 { margin: 4px 0 20px; font-size: 1.5rem; font-weight: 400; }
 .category.suspicious { color: #ae691d; }.category.malicious { color: #a3332d; }
 .metric-row { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--line); }.metric-row div { padding: 22px 18px 22px 0; }.metric-row span { display: block; color: var(--muted); font: .68rem Arial, sans-serif; text-transform: uppercase; letter-spacing: .08em; }.metric-row strong { display: block; margin-top: 6px; font: 1.35rem Georgia, serif; }
 .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; padding-top: 24px; }
+#message .grid > .panel:nth-child(-n + 2) { grid-column: 1 / -1; }
 .panel { min-height: 190px; padding: 24px; background: color-mix(in srgb, var(--panel) 88%, transparent); border: 1px solid var(--line); }
 .wide { grid-column: span 2; min-height: auto; }
 dl { display: grid; grid-template-columns: minmax(100px, .5fr) 1fr; gap: 10px 16px; margin: 0; font: .88rem/1.35 Arial, sans-serif; }
