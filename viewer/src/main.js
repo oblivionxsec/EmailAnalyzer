@@ -189,35 +189,21 @@ function addReport(report, name) {
   render(report);
 }
 
-async function checkVirusTotal() {
-  const key = byId("vt-key").value.trim();
+async function importVirusTotalJson(file) {
   const status = byId("status");
-  if (!key) { status.hidden = false; status.textContent = "Enter your own VirusTotal API key first. It is not saved."; return; }
-  if (!activeReportId) { status.hidden = false; status.textContent = "Load a report before checking VirusTotal."; return; }
+  if (!activeReportId) { status.hidden = false; status.textContent = "Load a report before importing vendor results."; return; }
   const report = reports.get(activeReportId).report;
-  const hashes = [];
-  const collect = (items) => items.forEach((item) => { if (item.hash?.sha256) hashes.push(item.hash.sha256); collect(item.children || []); });
-  if (report.email?.raw_hash?.sha256) hashes.push(report.email.raw_hash.sha256);
-  collect(report.attachments || []);
-  const matches = [];
-  for (const hash of [...new Set(hashes)]) {
-    try {
-      const response = await fetch(`https://www.virustotal.com/api/v3/files/${encodeURIComponent(hash)}`, { headers: { "x-apikey": key, accept: "application/json" } });
-      if (response.status === 404) continue;
-      if (!response.ok) throw new Error(`VirusTotal returned HTTP ${response.status}`);
-      const data = await response.json();
-      const stats = data.data?.attributes?.last_analysis_stats || {};
-      const attributes = data.data?.attributes || {};
-      const engines = Object.entries(data.data?.attributes?.last_analysis_results || {}).map(([engine, result]) => ({ engine, category: result.category || "undetected", result: result.result || "", version: result.engine_version || "" }));
-      matches.push({ source: "virustotal", subject: hash, malicious: stats.malicious || 0, suspicious: stats.suspicious || 0, undetected: stats.undetected || 0, harmless: stats.harmless || 0, total: Object.keys(data.data?.attributes?.last_analysis_results || {}).length, reputation: attributes.reputation ?? 0, type: attributes.type_description || attributes.type_tag || "unknown", size: attributes.size || 0, first_submission: attributes.first_submission_date || null, last_analysis: attributes.last_analysis_date || null, engines, permalink: `https://www.virustotal.com/gui/file/${hash}` });
-    } catch (error) {
-      status.hidden = false; status.textContent = `VirusTotal check failed: ${error.message}`; return;
-    }
-  }
-  report.threat_intel = { mode: "virustotal-browser", matches, lookups: [...new Set(hashes)].length };
+  const imported = JSON.parse(await file.text());
+  const data = imported.data || imported;
+  const attributes = data.attributes || {};
+  const stats = attributes.last_analysis_stats || {};
+  const engines = Object.entries(attributes.last_analysis_results || {}).map(([engine, result]) => ({ engine, category: result.category || "undetected", result: result.result || "", version: result.engine_version || "" }));
+  const hash = data.id || attributes.sha256 || report.email?.raw_hash?.sha256 || "unknown";
+  const match = { source: "virustotal", subject: hash, malicious: stats.malicious || 0, suspicious: stats.suspicious || 0, undetected: stats.undetected || 0, harmless: stats.harmless || 0, total: engines.length, reputation: attributes.reputation ?? 0, type: attributes.type_description || attributes.type_tag || "unknown", size: attributes.size || 0, first_submission: attributes.first_submission_date || null, last_analysis: attributes.last_analysis_date || null, engines, permalink: `https://www.virustotal.com/gui/file/${hash}` };
+  report.threat_intel = { mode: "virustotal-imported-json", matches: [match], lookups: 1 };
   render(report);
   status.hidden = false;
-  status.textContent = matches.length ? `VirusTotal found ${matches.length} flagged hash(es).` : "VirusTotal found no flagged hashes for this report.";
+  status.textContent = "VirusTotal JSON imported successfully. No API key was sent from this page.";
 }
 
 function renderFindings(target, findings, emptyText) {
@@ -332,7 +318,12 @@ byId("file-input").addEventListener("change", async (event) => {
   event.target.value = "";
 });
 
-byId("vt-check").addEventListener("click", checkVirusTotal);
+byId("vt-json").addEventListener("change", async (event) => {
+  const file = event.target.files[0];
+  if (!file) return;
+  try { await importVirusTotalJson(file); } catch (error) { byId("status").hidden = false; byId("status").textContent = `Unable to import vendor JSON: ${error.message}`; }
+  event.target.value = "";
+});
 
 const status = byId("status");
 byId("report-meta").textContent = "No report loaded";
